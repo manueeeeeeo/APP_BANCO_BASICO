@@ -13,8 +13,7 @@
         android:theme="@style/Theme.APPBANCO"
         tools:targetApi="31">
         <activity
-            android:name=".Principal"
-            android:exported="false" />
+            android:name=".Principal"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
