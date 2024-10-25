@@ -1,6 +1,10 @@
 package com.banco.appbanco;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +23,23 @@ public class MainActivity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        Button iniciar = (Button) findViewById(R.id.btnIniciar);
+        iniciar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EditText cla = (EditText) findViewById(R.id.txtPassword);
+                int clave = Integer.parseInt(cla.getText().toString());
+                if(clave==1234){
+                    // Crear el intent para iniciar la SecondActivity
+                    Intent intent = new Intent(MainActivity.this, Principal.class);
+                    // Iniciar la actividad
+                    startActivity(intent);
+                }else{
+                    cla.setText("");
+                }
+            }
         });
     }
 }
