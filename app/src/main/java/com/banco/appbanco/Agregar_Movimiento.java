@@ -1,6 +1,11 @@
 package com.banco.appbanco;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Spinner;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +25,53 @@ public class Agregar_Movimiento extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        Button borrar = (Button) findViewById(R.id.btnBorrarCampos);
+        borrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EditText nombre = (EditText) findViewById(R.id.etNombreMovimiento);
+                EditText des = (EditText) findViewById(R.id.etDescripcion);
+                EditText cantidad = (EditText) findViewById(R.id.etCantidad);
+
+                nombre.setText("");
+                des.setText("");
+                cantidad.setText("");
+            }
+        });
+
+        Button volverPrincipal = (Button) findViewById(R.id.btnVolver);
+        volverPrincipal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Agregar_Movimiento.this, Principal.class);
+                // Iniciar la actividad
+                startActivity(intent);
+            }
+        });
+
+        Button subir = (Button) findViewById(R.id.btnAgregarMovimiento);
+        subir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                guardarDatos();
+            }
+        });
+    }
+
+    public void guardarDatos(){
+        EditText nombre = (EditText) findViewById(R.id.etNombreMovimiento);
+        EditText des = (EditText) findViewById(R.id.etDescripcion);
+        EditText cantidad = (EditText) findViewById(R.id.etCantidad);
+        Spinner tipoMovi = (Spinner) findViewById(R.id.spTipoMovimiento);
+
+        String no = nombre.getText().toString();
+        String descripcion = des.getText().toString();
+        int canti = Integer.parseInt(cantidad.getText().toString());
+
+        if(no.isEmpty() || descripcion.isEmpty() || canti==0){
+            MoviVacio dia = new MoviVacio();
+            dia.show(getSupportFragmentManager(), "Esta vacio");
+        }
     }
 }
