@@ -68,11 +68,13 @@ public class Agregar_Movimiento extends AppCompatActivity implements MoviVacio.O
 
         String no = nombre.getText().toString();
         String descripcion = des.getText().toString();
-        int canti = Integer.parseInt(cantidad.getText().toString());
+        String canti = cantidad.getText().toString();
 
-        if(no.isEmpty() || descripcion.isEmpty() || canti==0){
+        if(no.isEmpty() || descripcion.isEmpty() || canti.isEmpty()){
             MoviVacio dia = new MoviVacio();
             dia.show(getSupportFragmentManager(), "Esta vacio");
+        }else{
+            int cantid = Integer.parseInt(canti);
         }
     }
 

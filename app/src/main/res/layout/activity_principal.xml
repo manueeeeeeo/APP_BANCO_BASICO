@@ -22,6 +22,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#FFFFFF"
             android:orientation="vertical"
             android:padding="16dp">
 
@@ -30,19 +31,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="CUENTA AHORRO"
-                android:textSize="18sp"
                 android:textColor="#0288D1"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txtCantidadDinero"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:text="€10,000.00"
-                android:textSize="36sp"
-                android:textStyle="bold"
                 android:textColor="#01579B"
-                android:layout_gravity="center_horizontal" />
+                android:textSize="36sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -62,16 +63,15 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerMovimientos"
-        android:layout_width="378dp"
-        android:layout_height="458dp"
+        android:layout_width="373dp"
+        android:layout_height="415dp"
         android:layout_margin="16dp"
         android:background="#B3E5FC"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.622" />
+        app:layout_constraintVertical_bias="0.534" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -107,5 +107,17 @@
             android:textSize="24sp" />
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btnTodosMovi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#0277BD"
+        android:text="Ver todo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.877" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

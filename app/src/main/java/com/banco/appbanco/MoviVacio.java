@@ -15,9 +15,9 @@ public class MoviVacio extends DialogFragment {
         // Usamos la clase Builder para construir el diálogo
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         //Escribimos el título
-        builder.setTitle("RECUPERACIÓN DE CLAVE");
+        builder.setTitle("ERROR!");
         //Escribimos la pregunta
-        builder.setMessage("Recuerde que su clave para acceder al banco es 1234");
+        builder.setMessage("Existen campos vacios, asgurese de que todos los campos estén rellenos, por favor!!");
         //añadimos el botón de Si y su acción asociada
         builder.setPositiveButton("¡OKEY!", new DialogInterface.OnClickListener(){
             public void onClick(DialogInterface dialog, int id) {

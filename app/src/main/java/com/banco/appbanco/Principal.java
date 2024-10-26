@@ -44,5 +44,15 @@ public class Principal extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button verTodo = (Button) findViewById(R.id.btnTodosMovi);
+        verTodo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Principal.this, Todos_Movimientos.class);
+                // Iniciar la actividad
+                startActivity(intent);
+            }
+        });
     }
 }

@@ -13,34 +13,34 @@
         android:id="@+id/etNombreMovimiento"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Nombre del movimiento"
-        android:textColor="#01579B"
-        android:backgroundTint="#81D4FA"
-        android:padding="12dp"
-        android:inputType="text"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="32dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp" />
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#01ACFF"
+        android:hint="Nombre del movimiento"
+        android:inputType="text"
+        android:padding="12dp"
+        android:textColor="#001D34"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Campo para una pequeña descripción -->
     <EditText
         android:id="@+id/etDescripcion"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Descripción"
-        android:textColor="#01579B"
-        android:backgroundTint="#81D4FA"
-        android:padding="12dp"
-        android:inputType="textMultiLine"
-        app:layout_constraintTop_toBottomOf="@+id/etNombreMovimiento"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp" />
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#01ACFF"
+        android:hint="Descripción"
+        android:inputType="textMultiLine"
+        android:padding="12dp"
+        android:textColor="#001D34"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNombreMovimiento" />
 
     <!-- Spinner para seleccionar entre ingreso y gasto -->
     <Spinner
@@ -61,17 +61,17 @@
         android:id="@+id/etCantidad"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Cantidad"
-        android:textColor="#01579B"
-        android:backgroundTint="#81D4FA"
-        android:padding="12dp"
-        android:inputType="numberDecimal"
-        app:layout_constraintTop_toBottomOf="@+id/spTipoMovimiento"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp" />
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#01ACFF"
+        android:hint="Cantidad"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:textColor="#001D34"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spTipoMovimiento" />
 
     <!-- Botón para añadir el movimiento -->
     <Button
