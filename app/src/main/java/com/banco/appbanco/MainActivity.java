@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,7 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import org.w3c.dom.Text;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements RecuperarPass.OnRespuesta{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,5 +53,10 @@ public class MainActivity extends AppCompatActivity {
                 dia.show(getSupportFragmentManager(), "Contraseña");
             }
         });
+    }
+
+    @Override
+    public void onRespuesta(String s) {
+        Toast.makeText(getApplicationContext(), s,Toast.LENGTH_LONG).show();
     }
 }

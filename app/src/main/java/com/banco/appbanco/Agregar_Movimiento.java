@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,7 +14,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Agregar_Movimiento extends AppCompatActivity {
+public class Agregar_Movimiento extends AppCompatActivity implements MoviVacio.OnRespuesta{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,5 +74,10 @@ public class Agregar_Movimiento extends AppCompatActivity {
             MoviVacio dia = new MoviVacio();
             dia.show(getSupportFragmentManager(), "Esta vacio");
         }
+    }
+
+    @Override
+    public void onRespuesta(String s) {
+        Toast.makeText(getApplicationContext(), s,Toast.LENGTH_LONG).show();
     }
 }
