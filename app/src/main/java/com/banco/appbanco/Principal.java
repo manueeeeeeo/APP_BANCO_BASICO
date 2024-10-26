@@ -29,16 +29,19 @@ public class Principal extends AppCompatActivity {
         cerrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EditText cla = (EditText) findViewById(R.id.txtPassword);
-                int clave = Integer.parseInt(cla.getText().toString());
-                if(clave==1234){
-                    // Crear el intent para iniciar la SecondActivity
-                    Intent intent = new Intent(Principal.this, MainActivity.class);
-                    // Iniciar la actividad
-                    startActivity(intent);
-                }else{
-                    cla.setText("");
-                }
+                Intent intent = new Intent(Principal.this, MainActivity.class);
+                // Iniciar la actividad
+                startActivity(intent);
+            }
+        });
+
+        Button agregar = (Button) findViewById(R.id.btnAnadirMovimiento);
+        agregar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Principal.this, Agregar_Movimiento.class);
+                // Iniciar la actividad
+                startActivity(intent);
             }
         });
     }
