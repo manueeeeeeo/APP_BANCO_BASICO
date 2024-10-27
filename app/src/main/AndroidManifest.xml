@@ -13,8 +13,7 @@
         android:theme="@style/Theme.APPBANCO"
         tools:targetApi="31">
         <activity
-            android:name=".Todos_Movimientos"
-            android:exported="false" />
+            android:name=".Todos_Movimientos"/>
         <activity android:name=".Agregar_Movimiento" />
         <activity android:name=".Principal" />
         <activity

@@ -19,9 +19,9 @@
         android:id="@+id/text_cantidad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cantidad: $0.00"
-        android:textSize="14sp"
-        android:layout_marginBottom="4dp"/>
+        android:layout_marginBottom="4dp"
+        android:text="Cantidad: 0.00€"
+        android:textSize="14sp" />
 
     <TextView
         android:id="@+id/text_fecha"
